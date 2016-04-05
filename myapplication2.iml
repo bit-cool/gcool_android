@@ -78,6 +78,9 @@
     <orderEntry type="library" exported="" name="support-v4-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" exported="" name="universal-image-loader-1.8.6-with-sources" level="project" />
+=======
+>>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
   </component>
 </module>

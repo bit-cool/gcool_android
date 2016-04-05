@@ -23,6 +23,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+<<<<<<< HEAD
     compile files('libs/universal-image-loader-1.8.6-with-sources.jar')
 
+=======
+>>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
 }

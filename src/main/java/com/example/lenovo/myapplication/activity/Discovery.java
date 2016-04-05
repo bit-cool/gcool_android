@@ -1,5 +1,6 @@
 package com.example.lenovo.myapplication.activity;
 
+<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -30,11 +31,20 @@ public class Discovery extends AppCompatActivity {
     ArrayList<PicLoopInfo> picLoopInfos;
     ImageLoader imageLoader;
     DisplayImageOptions options;
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.example.lenovo.myapplication.R;
+
+public class Discovery extends AppCompatActivity {
+>>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discovery);
+<<<<<<< HEAD
         initImageLoader();
         // 获取图片加载实例
         imageLoader = ImageLoader.getInstance();
@@ -76,4 +86,7 @@ public class Discovery extends AppCompatActivity {
         ImageLoader.getInstance().init(config);
     }
 
+=======
+    }
+>>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
 }
