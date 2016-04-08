@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<View>list;
     ArrayList<ImageView> tabList;
     ArrayList<TextView> tvList;
-//    ArrayList<SpannableString> spannableStringList;
     ViewPager viewPager;
     MainAdapter adapter;
     LocalActivityManager manager;
@@ -131,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
         Intent in5=new Intent(getApplicationContext(), Me.class);
         View view5=getView("Me",in5);
 
+
+        tvList=new ArrayList<TextView>();
+        tabList=new ArrayList<ImageView>();
+        list=new ArrayList<>();
+
 //        SpannableString spannableString1=new SpannableString("拍摄");
 //        SpannableString spannableString2=new SpannableString("排行榜");
 //        SpannableString spannableString3=new SpannableString("发现");
@@ -141,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
         tabList=new ArrayList<ImageView>();
         list=new ArrayList<>();
 //        spannableStringList=new ArrayList<>();
+
 
         tvList.add(tvShot);
         tvList.add(tvRank);
@@ -160,11 +165,13 @@ public class MainActivity extends AppCompatActivity {
         list.add(view4);
         list.add(view5);
 
+
 //        spannableStringList.add(spannableString1);
 //        spannableStringList.add(spannableString2);
 //        spannableStringList.add(spannableString3);
 //        spannableStringList.add(spannableString4);
 //        spannableStringList.add(spannableString5);
+
     }
 
     private View getView(String id, Intent intent){
