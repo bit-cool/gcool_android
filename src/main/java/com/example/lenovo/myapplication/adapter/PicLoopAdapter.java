@@ -39,6 +39,7 @@ public class PicLoopAdapter extends PagerAdapter {
         // TODO Auto-generated method stub
         ImageView imageView=list.get(position);
         ((ViewPager) container).addView(imageView);
+        //点击事件
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

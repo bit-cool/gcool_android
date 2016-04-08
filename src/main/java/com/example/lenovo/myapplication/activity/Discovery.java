@@ -1,6 +1,6 @@
 package com.example.lenovo.myapplication.activity;
 
-<<<<<<< HEAD
+
 import android.graphics.Bitmap;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -29,22 +29,14 @@ public class Discovery extends AppCompatActivity {
     PicLoopAdapter adapter;
     ArrayList<ImageView> imageViews;
     ArrayList<PicLoopInfo> picLoopInfos;
+    ArrayList<View> dotList;
     ImageLoader imageLoader;
     DisplayImageOptions options;
-=======
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import com.example.lenovo.myapplication.R;
-
-public class Discovery extends AppCompatActivity {
->>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discovery);
-<<<<<<< HEAD
+        //初始化ImageLoader
         initImageLoader();
         // 获取图片加载实例
         imageLoader = ImageLoader.getInstance();
@@ -57,15 +49,35 @@ public class Discovery extends AppCompatActivity {
                 .imageScaleType(ImageScaleType.EXACTLY).build();
         initViews();
     }
-
+    /*初始化视图*/
     private void initViews(){
         viewPager=(ViewPager)findViewById(R.id.disc_loop);
         dot0=findViewById(R.id.v_dot0);
         dot1=findViewById(R.id.v_dot1);
         dot2=findViewById(R.id.v_dot2);
         dot3=findViewById(R.id.v_dot3);
-//        adapter=new PicLoopAdapter(imageViews);
+        dotList.add(dot0);
+        dotList.add(dot1);
+        dotList.add(dot2);
+        dotList.add(dot3);
+        addPics();
+        adapter=new PicLoopAdapter(imageViews);
+        viewPager.setAdapter(adapter);
+        viewPager.setOnPageChangeListener(new pageChangeListener());
     }
+    /*获取图片资源*/
+    private void addPics(){
+        imageViews=new ArrayList<>();
+        for (int i=0;i<picLoopInfos.size();i++){
+            ImageView imageView=new ImageView(this);
+            //异步加载图片
+            imageLoader.displayImage(picLoopInfos.get(i).getImageUrl(),imageView,options);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageViews.add(imageView);
+            dotList.get(i).setVisibility(View.VISIBLE);
+        }
+    }
+    /*初始化ImageLoader*/
     private void initImageLoader() {
         File cacheDir = com.nostra13.universalimageloader.utils.StorageUtils
                 .getOwnCacheDirectory(getApplicationContext(),
@@ -86,7 +98,35 @@ public class Discovery extends AppCompatActivity {
         ImageLoader.getInstance().init(config);
     }
 
-=======
+    private class pageChangeListener implements ViewPager.OnPageChangeListener{
+        private int oldPostion=0;
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            dotList.get(position).setBackgroundResource(R.drawable.dot_focus);
+            dotList.get(oldPostion).setBackgroundResource(R.drawable.dot_normal);
+            oldPostion=position;
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
     }
->>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
+    /*获得图片信息*/
+    private ArrayList<PicLoopInfo> getPicInfos(){
+        ArrayList<PicLoopInfo> picList=new ArrayList<>();
+
+        return picList;
+    }
+
+
+
+
+
+
 }

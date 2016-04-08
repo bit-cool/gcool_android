@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-<<<<<<< HEAD
+
     <style name="dot_style">
         <item name="android:layout_width">5dip</item>
         <item name="android:layout_height">5dip</item>
@@ -15,7 +15,5 @@
         <item name="android:layout_marginLeft">1.5dip</item>
         <item name="android:layout_marginRight">1.5dip</item>
     </style>
-=======
 
->>>>>>> 35f8f70fce53b3abd9c57a20786aa57f95cad263
 </resources>

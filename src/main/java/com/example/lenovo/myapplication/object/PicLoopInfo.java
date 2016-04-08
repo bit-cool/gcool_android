@@ -5,6 +5,10 @@ package com.example.lenovo.myapplication.object;
  */
 public class PicLoopInfo {
     String picTitle;
+    String picDesc;
+    String imageUrl;
+    String targetUrl;
+    String date;
 
     public String getPicDesc() {
         return picDesc;
@@ -13,11 +17,6 @@ public class PicLoopInfo {
     public void setPicDesc(String picDesc) {
         this.picDesc = picDesc;
     }
-
-    String picDesc;
-    String imageUrl;
-    String targetUrl;
-    String date;
 
     public String getPicTitle() {
         return picTitle;
