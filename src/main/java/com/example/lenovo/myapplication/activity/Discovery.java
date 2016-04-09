@@ -56,6 +56,7 @@ public class Discovery extends AppCompatActivity {
         dot1=findViewById(R.id.v_dot1);
         dot2=findViewById(R.id.v_dot2);
         dot3=findViewById(R.id.v_dot3);
+        dotList=new ArrayList<>();
         dotList.add(dot0);
         dotList.add(dot1);
         dotList.add(dot2);
@@ -65,9 +66,10 @@ public class Discovery extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(new pageChangeListener());
     }
-    /*获取图片资源*/
+    /*加载图片资源*/
     private void addPics(){
         imageViews=new ArrayList<>();
+        picLoopInfos=getPicInfos();
         for (int i=0;i<picLoopInfos.size();i++){
             ImageView imageView=new ImageView(this);
             //异步加载图片

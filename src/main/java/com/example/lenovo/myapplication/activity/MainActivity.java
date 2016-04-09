@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
                 changeTabs(AMD);
             }
         });
-
-
+        //默认tab
+        //changeTabs(DISCOVERY);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
