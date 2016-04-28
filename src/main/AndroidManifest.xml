@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lenovo.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +21,8 @@
         <activity android:name=".activity.Rankings" />
         <activity android:name=".activity.Discovery" />
         <activity android:name=".activity.AMD" />
-        <activity android:name=".activity.Me"></activity>
+        <activity android:name=".activity.Me" />
+        <activity android:name=".activity.VideoSource_1"></activity>
     </application>
 
 </manifest>
