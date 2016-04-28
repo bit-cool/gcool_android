@@ -1,41 +1,23 @@
 package com.example.lenovo.myapplication.activity;
 
-
 import android.app.LocalActivityManager;
 import android.app.SearchManager;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.Handler;
-import android.os.Message;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.example.lenovo.myapplication.R;
 import com.example.lenovo.myapplication.adapter.DiscAdapter;
-import com.example.lenovo.myapplication.adapter.PicLoopAdapter;
-import com.example.lenovo.myapplication.object.PicLoopInfo;
-import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
-import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class Discovery extends AppCompatActivity {
     public static String IMAGE_CACHE_PATH = "imageloader/Cache"; // 图片缓存路径
@@ -48,7 +30,7 @@ public class Discovery extends AppCompatActivity {
 
 //    ViewPager viewPager;
 //    View dot0,dot1,dot2,dot3;
-//    PicLoopAdapter adapter;
+//    PicLoopAdapter loopAdapter;
 //    ArrayList<ImageView> imageViews;
 //    ArrayList<PicLoopInfo> picLoopInfos;
 //    ArrayList<View> dotList;
@@ -94,7 +76,7 @@ public class Discovery extends AppCompatActivity {
 //            View view1=getView("",in1);
 //            list.add(view1);
 //        }
-        Intent in1=new Intent(getApplicationContext(), AMD.class);
+        Intent in1=new Intent(getApplicationContext(), VideoSource_1.class);
         View view1=getView("",in1);
         Intent in2=new Intent(getApplicationContext(), Filming.class);
         View view2=getView("",in2);
@@ -125,7 +107,7 @@ public class Discovery extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.disc_tabLayout);
         tabLayout.setupWithViewPager(sourcePager);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-        String[] titles = new String[]{"Tab2221", "T2", "Tb3", "Tab4", "Tab5555555555","Tab2221", "T2", "Tb3", "Tab4", "Tab5555555555"};
+        String[] titles = new String[]{"爱奇艺", "优酷", "搜狐", "土豆", "乐视","Bilibili", "T2", "Tb3", "Tab4", "Tab5555555555"};
         for (int i=0;i<tabLayout.getTabCount();i++){
             tabLayout.getTabAt(i).setText(titles[i]);
         }
@@ -140,8 +122,8 @@ public class Discovery extends AppCompatActivity {
 //        dotList.add(dot2);
 //        dotList.add(dot3);
 //        //获得图片
-//        adapter=new PicLoopAdapter(addPics(),getApplicationContext());
-//        viewPager.setAdapter(adapter);
+//        loopAdapter=new PicLoopAdapter(addPics(),getApplicationContext());
+//        viewPager.setAdapter(loopAdapter);
 //        viewPager.setOnPageChangeListener(new pageChangeListener());
     }
 //    /*加载图片资源*/

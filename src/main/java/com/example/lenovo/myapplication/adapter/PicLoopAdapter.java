@@ -1,10 +1,14 @@
 package com.example.lenovo.myapplication.adapter;
 
+import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.lenovo.myapplication.R;
 
 import java.util.ArrayList;
 
@@ -13,18 +17,20 @@ import java.util.ArrayList;
  */
 public class PicLoopAdapter extends PagerAdapter {
     ArrayList<ImageView>list;
-    public PicLoopAdapter(ArrayList<ImageView> list){
+    Context context;
+    public PicLoopAdapter(ArrayList<ImageView> list,Context context){
      this.list=list;
+        this.context=context;
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return list.size();
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return false;
+        return view == object;
     }
     // 销毁视图
     @Override
@@ -44,9 +50,9 @@ public class PicLoopAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
 
-
+                Log.e("test","click");
             }
         });
-        return list.get(position);
+        return imageView;
     }
 }
