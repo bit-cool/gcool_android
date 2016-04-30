@@ -43,10 +43,13 @@
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
-    app:contentPadding="5dip">
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+
+    app:contentPadding="5dp">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scaleType="fitCenter"
         android:id="@+id/video_source_img"
         android:src="@drawable/test"/>
@@ -66,7 +69,7 @@
         <TextView
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/video_source_username"
             android:layout_toRightOf="@+id/video_source_usericon"
             android:textSize="14sp"

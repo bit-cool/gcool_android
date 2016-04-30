@@ -53,7 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         int myWidth = (screenWidth - UIUtils.dip2px(16)) / 2;
         params.height=data.get(position).getImgHeight();                    //设置item高度为服务器传来的图片高度
         params.width=myWidth;
-        holder.itemView.setLayoutParams(new FrameLayout.LayoutParams(myWidth,data.get(position).getImgHeight()));                            //将布局设置给holder
+        holder.itemView.setLayoutParams(/*new FrameLayout.LayoutParams(myWidth,data.get(position).getImgHeight())*/params);                            //将布局设置给holder
         holder.userName.setText(data.get(position).getUserName());
         if(mOnItemClickListener!=null){
             holder.itemView.setOnClickListener(new View.OnClickListener() {

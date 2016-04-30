@@ -228,11 +228,11 @@ public class VideoSource_1 extends AppCompatActivity {
     private ArrayList<VideoInfo> getVideoInfos(){
         ArrayList<VideoInfo> data=new ArrayList<>();
         VideoInfo videoInfo=new VideoInfo();
-        videoInfo.setImgHeight(500);
+        videoInfo.setImgHeight(1000);
         videoInfo.setUserName("flyingharry");
         VideoInfo videoInfo1=new VideoInfo();
         videoInfo1.setUserName("happen");
-        videoInfo1.setImgHeight(200);
+        videoInfo1.setImgHeight(800);
 
         VideoInfo videoInfo2=new VideoInfo();
         videoInfo2.setUserName("happen");
