@@ -55,6 +55,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         params.width=myWidth;
         holder.itemView.setLayoutParams(/*new FrameLayout.LayoutParams(myWidth,data.get(position).getImgHeight())*/params);                            //将布局设置给holder
         holder.userName.setText(data.get(position).getUserName());
+        holder.videoImg.setImageResource(data.get(position).getImag());
         if(mOnItemClickListener!=null){
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

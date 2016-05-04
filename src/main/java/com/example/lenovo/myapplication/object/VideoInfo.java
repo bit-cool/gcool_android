@@ -8,6 +8,14 @@ public class VideoInfo {
     String userName;
     String userIcon;
     int imgHeight;
+    int imag; //测试图片
+    public int getImag() {
+        return imag;
+    }
+
+    public void setImag(int imag) {
+        this.imag = imag;
+    }
 
     public int getImgHeight() {
         return imgHeight;

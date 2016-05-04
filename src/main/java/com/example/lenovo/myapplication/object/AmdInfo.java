@@ -4,15 +4,24 @@ package com.example.lenovo.myapplication.object;
  * Created by lenovo on 2016/4/23.
  */
 public class AmdInfo {
-    /*imgUrl:图片url
-      tag: amd活动标签类型
-      author:amd活动发起人
-      agreeNum:点赞数
+    /*@imgUrl:图片url
+      @tag: amd活动标签类型
+      @author:amd活动发起人
+      @agreeNum:点赞数
     * */
     String imgUrl;
     String tag;
     String author;
     String agreeNum;
+    String name;
+    int imag; // 测试
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getImgUrl() {
         return imgUrl;

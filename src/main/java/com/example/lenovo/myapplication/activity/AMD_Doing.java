@@ -8,9 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.example.lenovo.myapplication.R;
+import com.example.lenovo.myapplication.adapter.AMDListAdapter;
 import com.example.lenovo.myapplication.adapter.PicLoopAdapter;
+import com.example.lenovo.myapplication.object.AmdInfo;
 import com.example.lenovo.myapplication.object.PicLoopInfo;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
@@ -79,7 +82,9 @@ public class AMD_Doing extends AppCompatActivity {
         viewPager.setAdapter(loopAdapter);
         viewPager.setOnPageChangeListener(new pageChangeListener());
 
-
+        ListView listView=(ListView)findViewById(R.id.amd_doing_lv);
+        AMDListAdapter amdListAdapter=new AMDListAdapter(getApplicationContext(),addList());
+        listView.setAdapter(amdListAdapter);
 
     }
     /*加载图片资源*/
@@ -175,4 +180,25 @@ public class AMD_Doing extends AppCompatActivity {
             }
         }
     }
+
+    //网络请求获得
+    private ArrayList<AmdInfo> addList(){
+        ArrayList<AmdInfo> list=new ArrayList<>();
+        AmdInfo amdInfo1=new AmdInfo();
+        amdInfo1.setName("#大胃王挑战赛#");
+        amdInfo1.setAgreeNum("4379");
+        amdInfo1.setAuthor("HAPPEN");
+        amdInfo1.setTag("搞笑");
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        list.add(amdInfo1);
+        return list;
+
+    }
+
 }

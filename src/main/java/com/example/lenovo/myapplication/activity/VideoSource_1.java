@@ -224,19 +224,25 @@ public class VideoSource_1 extends AppCompatActivity {
             }
         }
     }
-
+    /*
+    * 图片高度从服务器获得
+    * */
     private ArrayList<VideoInfo> getVideoInfos(){
         ArrayList<VideoInfo> data=new ArrayList<>();
         VideoInfo videoInfo=new VideoInfo();
         videoInfo.setImgHeight(1000);
         videoInfo.setUserName("flyingharry");
+        videoInfo.setImag(R.drawable.fenlei_01);
+
         VideoInfo videoInfo1=new VideoInfo();
         videoInfo1.setUserName("happen");
         videoInfo1.setImgHeight(800);
+        videoInfo1.setImag(R.drawable.fenlei_02);
 
         VideoInfo videoInfo2=new VideoInfo();
         videoInfo2.setUserName("happen");
-        videoInfo2.setImgHeight(2000);
+        videoInfo2.setImgHeight(900);
+        videoInfo2.setImag(R.drawable.fenlei_03);
 
         data.add(videoInfo);
         data.add(videoInfo1);

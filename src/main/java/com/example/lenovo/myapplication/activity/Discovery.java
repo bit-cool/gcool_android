@@ -78,13 +78,13 @@ public class Discovery extends AppCompatActivity {
 //        }
         Intent in1=new Intent(getApplicationContext(), VideoSource_1.class);
         View view1=getView("",in1);
-        Intent in2=new Intent(getApplicationContext(), Me.class);
+        Intent in2=new Intent(getApplicationContext(), VideoSource_2.class);
         View view2=getView("",in2);
-        Intent in3=new Intent(getApplicationContext(), Rankings.class);
+        Intent in3=new Intent(getApplicationContext(), VideoSource_3.class);
         View view3=getView("",in3);
-        Intent in4=new Intent(getApplicationContext(), Filming.class);
+        Intent in4=new Intent(getApplicationContext(), VideoSource_2.class);
         View view4=getView("",in4);
-        Intent in5=new Intent(getApplicationContext(), AMD.class);
+        Intent in5=new Intent(getApplicationContext(), VideoSource_3.class);
         View view5=getView("",in5);
         list.add(view1);
         list.add(view2);
