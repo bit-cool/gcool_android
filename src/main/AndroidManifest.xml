@@ -28,7 +28,11 @@
         <activity android:name=".activity.AMD_Doing" />
         <activity android:name=".activity.VideoSource_2" />
         <activity android:name=".activity.VideoSource_3" />
-        <activity android:name=".activity.AMD_New"></activity>
+        <activity android:name=".activity.AMD_New" />
+        <activity android:name=".activity.Me_Opus" />
+        <activity android:name=".activity.Me_Collections" />
+        <activity android:name=".activity.Me_Amds" />
+        <activity android:name=".activity.Me_Edit"></activity>
     </application>
 
 </manifest>
