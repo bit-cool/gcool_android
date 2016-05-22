@@ -1,27 +1,18 @@
 package com.example.lenovo.myapplication.activity;
 
-import android.annotation.TargetApi;
 import android.app.LocalActivityManager;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lenovo.myapplication.R;
-import com.example.lenovo.myapplication.activity.AMD;
-import com.example.lenovo.myapplication.activity.Discovery;
-import com.example.lenovo.myapplication.activity.Filming;
-import com.example.lenovo.myapplication.activity.Me;
-import com.example.lenovo.myapplication.activity.Rankings;
+import com.example.lenovo.myapplication.activity.discovery.Discovery;
+import com.example.lenovo.myapplication.activity.me.Me;
 import com.example.lenovo.myapplication.adapter.MainAdapter;
 
 import java.util.ArrayList;
@@ -135,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         View view2=getView("rankings",in2);
         Intent in3=new Intent(getApplicationContext(), Discovery.class);
         View view3=getView("discovery",in3);
-        Intent in4=new Intent(getApplicationContext(), AMD.class);
+        Intent in4=new Intent(getApplicationContext(), com.example.lenovo.myapplication.activity.amd.AMD.class);
         View view4=getView("Amd",in4);
         Intent in5=new Intent(getApplicationContext(), Me.class);
         View view5=getView("Me",in5);

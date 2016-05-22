@@ -1,4 +1,4 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.amd;
 
 import android.graphics.Bitmap;
 import android.os.Handler;
@@ -29,8 +29,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class AMD_Finished extends AppCompatActivity {
-
+public class AMD_Doing extends AppCompatActivity {
     public static String IMAGE_CACHE_PATH = "imageloader/Cache"; // 图片缓存路径
     ViewPager viewPager;
     View dot0,dot1,dot2,dot3;
@@ -51,7 +50,7 @@ public class AMD_Finished extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_amd__finished);
+        setContentView(R.layout.activity_amd__doing);
         //初始化ImageLoader
         initImageLoader();
         // 获取图片加载实例
@@ -68,11 +67,11 @@ public class AMD_Finished extends AppCompatActivity {
     }
 
     private void initViews() {
-        viewPager=(ViewPager)findViewById(R.id.amd_finished_vp);
-        dot0=findViewById(R.id.amd_finished_dot0);
-        dot1=findViewById(R.id.amd_finished_dot1);
-        dot2=findViewById(R.id.amd_finished_dot2);
-        dot3=findViewById(R.id.amd_finished_dot3);
+        viewPager=(ViewPager)findViewById(R.id.amd_doing_vp);
+        dot0=findViewById(R.id.amd_doing_dot0);
+        dot1=findViewById(R.id.amd_doing_dot1);
+        dot2=findViewById(R.id.amd_doing_dot2);
+        dot3=findViewById(R.id.amd_doing_dot3);
         dotList=new ArrayList<>();
         dotList.add(dot0);
         dotList.add(dot1);
@@ -83,7 +82,7 @@ public class AMD_Finished extends AppCompatActivity {
         viewPager.setAdapter(loopAdapter);
         viewPager.setOnPageChangeListener(new pageChangeListener());
 
-        ListView listView=(ListView)findViewById(R.id.amd_finished_lv);
+        ListView listView=(ListView)findViewById(R.id.amd_doing_lv);
         AMDListAdapter amdListAdapter=new AMDListAdapter(getApplicationContext(),addList());
         listView.setAdapter(amdListAdapter);
 
@@ -186,8 +185,8 @@ public class AMD_Finished extends AppCompatActivity {
     private ArrayList<AmdInfo> addList(){
         ArrayList<AmdInfo> list=new ArrayList<>();
         AmdInfo amdInfo1=new AmdInfo();
-        amdInfo1.setName("#树懒模仿赛#");
-        amdInfo1.setAgreeNum("112345");
+        amdInfo1.setName("#大胃王挑战赛#");
+        amdInfo1.setAgreeNum("4379");
         amdInfo1.setAuthor("HAPPEN");
         amdInfo1.setTag("搞笑");
         list.add(amdInfo1);
@@ -201,4 +200,5 @@ public class AMD_Finished extends AppCompatActivity {
         return list;
 
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.me;
 
 import android.app.LocalActivityManager;
 import android.content.Intent;
@@ -6,18 +6,25 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lenovo.myapplication.R;
 import com.example.lenovo.myapplication.adapter.MeAdapter;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 public class Me extends AppCompatActivity {
     ViewPager viewPager;
     LocalActivityManager manager;
-    TextView Edit;
+    TextView Edit,name,qianMing,ZuoPin,shouCang,AMD;
+    ImageView headPic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +32,10 @@ public class Me extends AppCompatActivity {
         manager=new LocalActivityManager(this,true);
         manager.dispatchCreate(savedInstanceState);
         initViews();
+        setContents();
+    }
+    //从网络获得基本信息
+    private void setContents() {
 
     }
 
@@ -40,6 +51,27 @@ public class Me extends AppCompatActivity {
             }
         });
 
+        name=(TextView)findViewById(R.id.me_name);
+        qianMing=(TextView)findViewById(R.id.me_qianming);
+        ZuoPin=(TextView)findViewById(R.id.me_zuopinshu);
+        shouCang=(TextView)findViewById(R.id.me_shoucangshu);
+        AMD=(TextView)findViewById(R.id.me_amdshu);
+
+        Toolbar toolbar=(Toolbar)findViewById(R.id.me_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id=item.getItemId();
+                if(id==R.id.action_me_settings){
+                    Intent intent=new Intent(getApplicationContext(),SettingActivity.class);
+                    startActivity(intent);
+                }
+                return false;
+            }
+        });
 
         viewPager=(ViewPager)findViewById(R.id.me_vp);
         Intent in1=new Intent(getApplicationContext(), Me_Opus.class);
@@ -67,5 +99,11 @@ public class Me extends AppCompatActivity {
 
     private View getView(String id, Intent intent){
         return manager.startActivity(id,intent).getDecorView();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.me, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

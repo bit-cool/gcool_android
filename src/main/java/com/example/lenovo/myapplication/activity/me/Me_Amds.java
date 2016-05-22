@@ -1,4 +1,4 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.me;
 
 import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;

@@ -1,26 +1,22 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.amd;
 
 import android.app.LocalActivityManager;
-import android.app.SearchManager;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.lenovo.myapplication.R;
-import com.example.lenovo.myapplication.adapter.AMDTabAdapter;
+import com.example.lenovo.myapplication.activity.SearchActivity;
+import com.example.lenovo.myapplication.adapter.ViewPagerAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AMD extends AppCompatActivity {
     LocalActivityManager manager;
@@ -42,7 +38,7 @@ public class AMD extends AppCompatActivity {
         ArrayList<View> list=new ArrayList<>();
         list.add(view1);
         list.add(view2);
-        AMDTabAdapter adapter=new AMDTabAdapter(list);
+        ViewPagerAdapter adapter=new ViewPagerAdapter(list);
 
         ViewPager typePager=(ViewPager)findViewById(R.id.amd_vp);
         typePager.setAdapter(adapter);
@@ -75,6 +71,11 @@ public class AMD extends AppCompatActivity {
 
         @Override
         public boolean onMenuItemClick(MenuItem item) {
+            int id =item.getItemId();
+            if(id==R.id.action_amd_search){
+                Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+                startActivity(intent);
+            }
             return false;
         }
     }
@@ -83,9 +84,9 @@ public class AMD extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.discovery, menu);
         // Retrieve the SearchView and plug it into SearchManager
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
-        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+//        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+//        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         return true;
     }
 

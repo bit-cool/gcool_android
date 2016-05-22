@@ -20,19 +20,29 @@
         </activity>
         <activity android:name=".activity.Filming" />
         <activity android:name=".activity.Rankings" />
-        <activity android:name=".activity.Discovery" />
-        <activity android:name=".activity.AMD" />
-        <activity android:name=".activity.Me" />
-        <activity android:name=".activity.VideoSource_1" />
-        <activity android:name=".activity.AMD_Finished" />
-        <activity android:name=".activity.AMD_Doing" />
-        <activity android:name=".activity.VideoSource_2" />
-        <activity android:name=".activity.VideoSource_3" />
-        <activity android:name=".activity.AMD_New" />
-        <activity android:name=".activity.Me_Opus" />
-        <activity android:name=".activity.Me_Collections" />
-        <activity android:name=".activity.Me_Amds" />
-        <activity android:name=".activity.Me_Edit"></activity>
+        <activity android:name=".activity.discovery.Discovery" />
+        <activity android:name=".activity.amd.AMD" />
+        <activity android:name=".activity.me.Me" />
+        <activity android:name=".activity.discovery.VideoSource_1" />
+        <activity android:name=".activity.amd.AMD_Finished" />
+        <activity android:name=".activity.amd.AMD_Doing" />
+        <activity android:name=".activity.discovery.VideoSource_2" />
+        <activity android:name=".activity.discovery.VideoSource_3" />
+        <activity android:name=".activity.amd.AMD_New" />
+        <activity android:name=".activity.me.Me_Opus" />
+        <activity android:name=".activity.me.Me_Collections" />
+        <activity android:name=".activity.me.Me_Amds" />
+        <activity android:name=".activity.me.Me_Edit" />
+        <activity android:name=".activity.me.Me_Edit_Qianming" />
+        <activity android:name=".activity.me.Me_Edit_Nicheng" />
+        <activity
+            android:name=".activity.me.Me_Edit_Gender"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name=".activity.me.Me_Edit_Birth" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".activity.me.SettingActivity"></activity>
     </application>
 
 </manifest>

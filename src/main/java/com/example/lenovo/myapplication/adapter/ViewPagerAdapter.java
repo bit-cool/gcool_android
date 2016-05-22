@@ -10,10 +10,10 @@ import java.util.ArrayList;
 /**
  * Created by lenovo on 2016/5/3.
  */
-public class AMDTabAdapter extends PagerAdapter {
+public class ViewPagerAdapter extends PagerAdapter {
     ArrayList<View> list;
 
-    public AMDTabAdapter(ArrayList<View> list){
+    public ViewPagerAdapter(ArrayList<View> list){
         this.list=list;
     }
 

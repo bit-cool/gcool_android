@@ -7,6 +7,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.lenovo.myapplication.activity.VideoSource_3">
+    tools:context=".activity.discovery.VideoSource_3">
 
 </RelativeLayout>

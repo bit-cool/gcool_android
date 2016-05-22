@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.me.Me_Edit">
+    tools:context="com.example.lenovo.myapplication.activity.me.SettingActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6"
-            android:text="编辑个人资料"
+            android:text="设置"
             android:gravity="center"
             android:textColor="@color/White"
             android:textSize="18sp"/>
@@ -36,42 +36,11 @@
             android:textSize="15sp"
             android:id="@+id/me_edit_save" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="10">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/ripple_bg_white">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:padding="12dp"
-                android:layout_gravity="left"
-                android:text="头像"
-                />
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2">
-                <ImageView
-                    android:padding="12dp"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="right"
-                    android:src="@drawable/test"
-                    android:id="@+id/me_edit_touxiang" />
-            </FrameLayout>
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,16 +54,16 @@
                 android:layout_gravity="left"
                 android:gravity="center_vertical"
                 android:padding="12dp"
-                android:text="昵称"/>
-            <TextView
+                android:text="视频加昵称水印"/>
+            <Switch
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_gravity="right"
                 android:gravity="center_vertical|right"
                 android:padding="12dp"
-                android:text="刘子扬"
-                android:id="@+id/me_edit_nicheng" />
+                android:checked="false"
+                android:id="@+id/setting_shuiyin" />
         </LinearLayout>
 
         <LinearLayout
@@ -110,18 +79,44 @@
                 android:layout_gravity="left"
                 android:gravity="center_vertical"
                 android:padding="12dp"
-                android:text="个性签名"
+                android:text="WIFI网络下自动播放"
                 android:layout_marginTop="1dp" />
-            <TextView
+            <Switch
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_gravity="right"
                 android:gravity="center_vertical|right"
                 android:padding="12dp"
-                android:text="未填写"
-                android:id="@+id/me_edit_qianming" />
+                android:checked="false"
+                android:id="@+id/setting_autoplay" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/ripple_bg_white"
+            android:layout_marginTop="1dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="3G拍摄使用较低画质"
+                android:layout_marginTop="1dp" />
+            <Switch
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|right"
+                android:padding="12dp"
+                android:checked="false"
+                android:id="@+id/setting_3g_low" />
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -136,7 +131,7 @@
                 android:layout_gravity="left"
                 android:gravity="center_vertical"
                 android:padding="12dp"
-                android:text="性别"/>
+                android:text="清除缓存"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -144,35 +139,11 @@
                 android:layout_gravity="right"
                 android:gravity="center_vertical|right"
                 android:padding="12dp"
-                android:text="未填写"
-                android:id="@+id/me_edit_gender" />
+                android:text="4.4MB"
+                android:id="@+id/setting_clear_cach" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/ripple_bg_white"
-            android:layout_marginTop="1dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="left"
-                android:gravity="center_vertical"
-                android:padding="12dp"
-                android:text="生日"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="right"
-                android:gravity="center_vertical|right"
-                android:padding="12dp"
-                android:text="未填写"
-                android:id="@+id/me_edit_birthday" />
-        </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
 
 </LinearLayout>

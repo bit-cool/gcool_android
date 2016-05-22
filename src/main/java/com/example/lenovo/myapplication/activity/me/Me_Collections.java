@@ -1,4 +1,4 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.me;
 
 import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
@@ -14,19 +14,18 @@ import com.example.lenovo.myapplication.object.VideoInfo;
 
 import java.util.ArrayList;
 
-public class Me_Opus extends AppCompatActivity {
+public class Me_Collections extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_me__opus);
+        setContentView(R.layout.activity_me__collections);
         initViews();
     }
-
     private void initViews() {
         RecyclerView recyclerView;
         RecyclerAdapter recyclerAdapter;
-        recyclerView=(RecyclerView)findViewById(R.id.me_opus_rv);
+        recyclerView=(RecyclerView)findViewById(R.id.me_collections_rv);
         recyclerAdapter=new RecyclerAdapter(getApplicationContext(),getVideoInfos());
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
@@ -38,7 +37,7 @@ public class Me_Opus extends AppCompatActivity {
             }
         });
         recyclerView.setAdapter(recyclerAdapter);
-        //这里实现点击视频事件
+            //这里实现点击视频事件
         recyclerAdapter.setOnClickListener(new RecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int postion) {
@@ -80,6 +79,4 @@ public class Me_Opus extends AppCompatActivity {
         data.add(videoInfo1);
         return data;
     }
-
-
 }

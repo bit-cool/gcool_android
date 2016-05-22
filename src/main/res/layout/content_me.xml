@@ -80,9 +80,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="2"
-                    android:gravity="center"
                     android:textSize="12sp"
-                    android:id="@+id/me_shoucangshu" />
+                    android:id="@+id/me_shoucangshu"
+                    android:gravity="center_horizontal" />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -111,8 +111,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="收藏"
-                    android:gravity="center"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal" />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

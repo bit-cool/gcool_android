@@ -1,15 +1,15 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.discovery;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.lenovo.myapplication.R;
 
-public class AMD_New extends AppCompatActivity {
+public class VideoSource_2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_amd__new);
+        setContentView(R.layout.activity_video_source_2);
     }
 }

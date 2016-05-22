@@ -1,4 +1,4 @@
-package com.example.lenovo.myapplication.activity;
+package com.example.lenovo.myapplication.activity.discovery;
 
 import android.app.SearchManager;
 import android.graphics.Bitmap;
