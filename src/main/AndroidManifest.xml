@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.Filming" />
-        <activity android:name=".activity.Rankings" />
+        <activity android:name=".activity.rank.Rankings" />
         <activity android:name=".activity.discovery.Discovery" />
         <activity android:name=".activity.amd.AMD" />
         <activity android:name=".activity.me.Me" />

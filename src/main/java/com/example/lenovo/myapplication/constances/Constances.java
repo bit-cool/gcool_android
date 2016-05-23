@@ -1,7 +1,5 @@
 package com.example.lenovo.myapplication.constances;
 
-import com.example.lenovo.myapplication.activity.Rankings;
-
 import java.util.ArrayList;
 
 /**

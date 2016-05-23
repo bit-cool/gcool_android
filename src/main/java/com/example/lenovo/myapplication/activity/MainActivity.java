@@ -13,7 +13,9 @@ import android.widget.TextView;
 import com.example.lenovo.myapplication.R;
 import com.example.lenovo.myapplication.activity.discovery.Discovery;
 import com.example.lenovo.myapplication.activity.me.Me;
-import com.example.lenovo.myapplication.adapter.MainAdapter;
+import com.example.lenovo.myapplication.activity.rank.Rankings;
+import com.example.lenovo.myapplication.adapter.ViewPagerAdapter
+        ;
 
 import java.util.ArrayList;
 
@@ -22,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<ImageView> tabList;
     ArrayList<TextView> tvList;
     ViewPager viewPager;
-    MainAdapter adapter;
+    ViewPagerAdapter
+            adapter;
     LocalActivityManager manager;
 //    ImageView ivShot, ivRank, ivDisc, ivMe, ivAmd;
 //    TextView tvShot,tvRank,tvDisc,tvMe,tvAmd;
@@ -39,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         manager.dispatchCreate(savedInstanceState);
         initViews();
         viewPager=(ViewPager)findViewById(R.id.main_viewpager);
-        adapter=new MainAdapter(list);
+        adapter=new ViewPagerAdapter(
+                list);
         viewPager.setAdapter(adapter);
         TabLayout tabLayout=(TabLayout)findViewById(R.id.main_tabLayout);
         tabLayout.setupWithViewPager(viewPager);

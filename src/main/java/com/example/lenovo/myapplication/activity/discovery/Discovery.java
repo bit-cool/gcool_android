@@ -13,7 +13,7 @@ import android.view.View;
 
 import com.example.lenovo.myapplication.R;
 import com.example.lenovo.myapplication.activity.SearchActivity;
-import com.example.lenovo.myapplication.adapter.DiscAdapter;
+import com.example.lenovo.myapplication.adapter.ViewPagerAdapter;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class Discovery extends AppCompatActivity {
     ViewPager sourcePager;
     ArrayList<View> list;
     LocalActivityManager manager;
-    DiscAdapter adapter;
+    ViewPagerAdapter adapter;
 
 
     @Override
@@ -71,7 +71,7 @@ public class Discovery extends AppCompatActivity {
 
 
         sourcePager=(ViewPager)findViewById(R.id.disc_video_vp);
-        adapter=new DiscAdapter(getTabList(8)); //测试
+        adapter=new ViewPagerAdapter(getTabList(8)); //测试
         sourcePager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.disc_tabLayout);
         tabLayout.setupWithViewPager(sourcePager);

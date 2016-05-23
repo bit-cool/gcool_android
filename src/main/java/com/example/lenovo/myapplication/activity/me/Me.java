@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lenovo.myapplication.R;
-import com.example.lenovo.myapplication.adapter.MeAdapter;
+import com.example.lenovo.myapplication.adapter.ViewPagerAdapter;
 
 import org.w3c.dom.Text;
 
@@ -84,7 +84,7 @@ public class Me extends AppCompatActivity {
         list.add(view1);
         list.add(view2);
         list.add(view3);
-        MeAdapter adapter=new MeAdapter(list);
+        ViewPagerAdapter adapter=new ViewPagerAdapter(list);
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout= (TabLayout)findViewById(R.id.me_tabLayout);
